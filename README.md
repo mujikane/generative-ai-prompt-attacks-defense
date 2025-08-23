@@ -82,7 +82,7 @@ git clone https://github.com/<usuario>/generative-ai-prompt-attacks-defense.git
 cd generative-ai-prompt-attacks-defense
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-jupyter notebook notebooks/02_descriptive_analysis.ipynb
+jupyter notebook notebooks/02_descriptive_analysis.ipynb```
 
 ---
 
