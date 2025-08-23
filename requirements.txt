@@ -1,0 +1,9 @@
+transformers>=4.40
+huggingface_hub>=0.22
+torch>=2.1
+pandas>=2.0
+numpy>=1.26
+matplotlib>=3.8
+seaborn>=0.13
+nltk>=3.8
+textattack>=0.3.8
