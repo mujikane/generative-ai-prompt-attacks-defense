@@ -78,11 +78,12 @@ Each row in `dataset.xlsx` corresponds to one **model × defense × prompt** res
 
 ### Option B: Local (Python 3.10+)
 ```bash
-git clone https://github.com/<usuario>/generative-ai-prompt-attacks-defense.git
+git clone https://github.com/mujikane/generative-ai-prompt-attacks-defense.git
 cd generative-ai-prompt-attacks-defense
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-jupyter notebook notebooks/02_descriptive_analysis.ipynb```
+jupyter notebook notebooks/02_descriptive_analysis.ipynb
+```
 
 ---
 
@@ -91,3 +92,40 @@ jupyter notebook notebooks/02_descriptive_analysis.ipynb```
 The Jupyter/Colab notebooks (`notebooks/01_create_dataset.ipynb`, `notebooks/02_descriptive_analysis.ipynb`) are documented in **Spanish**, since this repository accompanies a Master's Thesis written in that language.  
 
 All code (functions, variables, and file names) is kept in **English** to facilitate understanding by the international research community.
+
+---
+
+## 📊 Key metrics
+
+- **ASR (Attack Success Rate)** → % of malicious prompts that induced unsafe output.  
+- **Correct Refusal Rate** → % of malicious prompts safely refused.  
+- **Mean scores per dimension** → seguridad, corrección, alineamiento, idioma, utilidad.  
+
+---
+
+## ⚖️ Ethics & safety
+
+- No personal data is included.  
+- Clinical prompts are synthetic and for research only.  
+- The code and dataset must **not** be used to deploy unsafe models.  
+
+---
+
+## 📚 Citation
+
+If you use this repository, please cite:
+
+```bibtex
+@misc{tfm_2025_prompt_defense,
+  title        = {Defenses against prompt attacks in generative AI},
+  author       = {Ane Múgica Urbina},
+  year         = {2025},
+  url          = {https://github.com/mujikane/generative-ai-prompt-attacks-defense}
+}
+```
+
+---
+
+## 📝 License
+
+MIT License – see [LICENSE](LICENSE).
