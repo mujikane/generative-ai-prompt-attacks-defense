@@ -83,3 +83,11 @@ cd generative-ai-prompt-attacks-defense
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 jupyter notebook notebooks/02_descriptive_analysis.ipynb
+
+---
+
+## 🌐 Language notice
+
+The Jupyter/Colab notebooks (`notebooks/01_create_dataset.ipynb`, `notebooks/02_descriptive_analysis.ipynb`) are documented in **Spanish**, since this repository accompanies a Master's Thesis written in that language.  
+
+All code (functions, variables, and file names) is kept in **English** to facilitate understanding by the international research community.
