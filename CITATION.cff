@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Defenses against prompt attacks in generative AI"
+authors:
+  - family-names: "Mugica Urbina"
+    given-names: "Ane"
+date-released: 2025-05-12
+version: "1.0.0"
+repository-code: "https://github.com/mujikane/generative-ai-prompt-attacks-defense"
+license: "MIT"
