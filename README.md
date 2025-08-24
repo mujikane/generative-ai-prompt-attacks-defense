@@ -3,24 +3,18 @@
 Experiments on **defenses against prompt injection attacks** in open-source Large Language Models (LLMs).  
 This repository accompanies the Master's Thesis *"Defenses against deceptive prompt attacks in generative AI"* and provides the dataset, code, and notebooks used in the research.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<usuario>/generative-ai-prompt-attacks-defense)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mujikane/generative-ai-prompt-attacks-defense)
 
 ---
 
 ## 📂 Repository structure
 
 - `data/`
-  - `dataset.xlsx` → Final dataset of **180 interactions** with manual annotations (scores 0–2 in five qualitative dimensions).
+  - `datos_modelo_tfm.xlsx` → Final dataset of **180 interactions** with manual annotations (scores 0–2 in five qualitative dimensions).
 - `notebooks/`
   - `01_create_dataset.ipynb` → Runs prompts across models and defenses, generates the raw Excel file with 180 responses (without scores).
-  - `02_descriptive_analysis.ipynb` → Loads the manually annotated Excel (`dataset.xlsx`) and performs descriptive and quantitative analysis.
-  - `03_additional_experiment.ipynb` → Extra experiment (appendix, not part of the main thesis).
-- `src/`
-  - `defenses.py` → Input filtering and prompt shielding implementations.
-  - `analysis.py` → Helper functions for loading the dataset and computing metrics.
-  - `run_experiment.py` → Skeleton for running prompt–model–defense combinations.
+  - `02_descriptive_analysis.ipynb` → Loads the manually annotated Excel (`datos_modelo_tfm.xlsx`) and performs descriptive and quantitative analysis.
 - `results/`
-  - `tablas/` → Aggregated results (CSV/XLSX).
   - `figuras/` → Plots (PNG/PDF).
 
 ---
@@ -35,11 +29,11 @@ There are two possible ways to reproduce the results:
      - `0` = inadequate or failed response  
      - `1` = partial or ambiguous response  
      - `2` = adequate or satisfactory response  
-   - Save the annotated file as `data/dataset.xlsx`.
+   - Save the annotated file as `data/datos_modelo_tfm.xlsx`.
 
 2. **Direct analysis (quick start)**  
    - Skip dataset creation and manual annotation.  
-   - Directly open `notebooks/02_descriptive_analysis.ipynb`, which loads `data/dataset.xlsx`.  
+   - Directly open `notebooks/02_descriptive_analysis.ipynb`, which loads `data/datos_modelo_tfm.xlsx`.  
    - You can either:  
      - Use the **already provided dataset** (pre-annotated), or  
      - Use your **own dataset** generated and annotated in step 1.  
@@ -50,7 +44,7 @@ In both cases, the analysis notebook will compute aggregated metrics, generate t
 
 ## 🗃️ Dataset schema
 
-Each row in `dataset.xlsx` corresponds to one **model × defense × prompt** response.  
+Each row in `datos_modelo_tfm.xlsx` corresponds to one **model × defense × prompt** response.  
 
 | Column (ES)  | Column (EN)  | Description |
 |--------------|--------------|-------------|
@@ -72,9 +66,9 @@ Each row in `dataset.xlsx` corresponds to one **model × defense × prompt** res
 
 ### Option A: Google Colab
 - To **recreate and annotate the dataset**:  
-  Run `01_create_dataset.ipynb` → evaluate responses manually (0–2) → save as `data/dataset.xlsx` → run `02_descriptive_analysis.ipynb`.  
+  Run `01_create_dataset.ipynb` → evaluate responses manually (0–2) → save as `data/datos_modelo_tfm.xlsx` → run `02_descriptive_analysis.ipynb`.  
 - To **use the pre-annotated dataset directly**:  
-  Simply run `02_descriptive_analysis.ipynb`, which loads `data/dataset.xlsx`.  
+  Simply run `02_descriptive_analysis.ipynb`, which loads `data/datos_modelo_tfm.xlsx`.  
 
 ### Option B: Local (Python 3.10+)
 ```bash
